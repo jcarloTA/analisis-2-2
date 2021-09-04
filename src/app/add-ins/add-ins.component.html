@@ -1,0 +1,23 @@
+
+
+<div class="container-page">
+    <h2>Agregar instrumento nuevo</h2>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="form">
+        
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Nombre" formControlName="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Desciption" formControlName="description">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-element">
+            <input matInput placeholder="type" formControlName="type">
+        </mat-form-field>
+        <div class="form-element">
+            <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Save</button>
+        </div>
+    </form>
+
+</div>
